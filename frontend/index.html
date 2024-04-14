@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="perPage">Por Pagina:</label>
+            <input type="number" id="perPage" value="10">
+        </div>
+
+        <div class="form-group">
+            <label for="magType">Ordenar por mag_type:</label>
+            <select id="magType">
+                <option value="mb">mb</option>
+                <option value="md">md</option>
+                <option value="mh">mh</option>
+                <option value="ml">ml</option>
+                <option value="mlr">mlr</option>
+                <option value="mw">mw</option>
+                <option value="mwr">mwr</option>
+                <option value="mww">mww</option>
+            </select>
+        </div>
+        <label for="elementId">ID del Elemento:</label>
+        <input type="number" id="elementId" placeholder="Introduce el ID del elemento">
+
+        <label for="comment">Comentario:</label>
+        <textarea id="comment" rows="4" cols="50" placeholder="Introduce tu comentario"></textarea>
+
+        <button onclick="fetchData()">Mostrar Elementos</button>
+        <button onclick="addComment()">Añadir Comentario</button>
+        <button onclick="getCommentsById()">Obtener Comentarios por ID</button>
+        <div id="results"></div>
+        <h2>Comentarios</h2>
+    </div>
+</body>
+</html>
